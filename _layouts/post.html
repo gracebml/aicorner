@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+<main class="container" style="grid-template-columns: 1fr;">
+    <article class="post-full">
+        <div class="post-header">
+            <h1>{{ page.title }}</h1>
+            <div class="post-meta">
+                <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
+                <span class="category">{{ page.categories | first }}</span>
+            </div>
+        </div>
+
+        <div class="post-content-full">
+            {% if page.image %}
+            <img src="{{ page.image }}" alt="{{ page.title }}">
+            {% endif %}
+            
+            {{ content }}
+        </div>
+        
+        <div class="post-footer">
+            <div class="post-tags">
+                {% for tag in page.tags %}
+                <a href="/tags#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+                {% endfor %}
+            </div>
+            
+            <div class="post-share">
+                <span>Chia sẻ:</span>
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        {% if site.related_posts.size > 0 %}
+        <div class="related-posts">
+            <h3>Bài viết liên quan</h3>
+            <div class="posts">
+                {% for post in site.related_posts limit:3 %}
+                <article class="post-card">
+                    <div class="post-image">
+                        {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        {% else %}
+                        <img src="/assets/images/placeholder.jpg" alt="{{ post.title }}">
+                        {% endif %}
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="date">{{ post.date | date: "%d/%m/%Y" }}</span>
+                            <span class="category">{{ post.categories | first }}</span>
+                        </div>
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <a href="{{ post.url }}" class="read-more">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if site.disqus_shortname %}
+        <div class="post-comments">
+            <h3>Bình luận</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = '{{ site.url }}{{ page.url }}';
+                    this.page.identifier = '{{ page.id }}';
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        {% endif %}
+    </article>
+</main>

@@ -1,0 +1,67 @@
+# _config.yml - Cấu hình Jekyll
+
+# Thông tin site
+title: AI Insights
+description: Blog chia sẻ kiến thức về trí tuệ nhân tạo
+author: Tên của bạn
+email: email@example.com
+baseurl: "" # thư mục con, nếu trang của bạn được host ở một thư mục con
+url: "https://github.com/gracebml/aicorner/" # URL của trang web của bạn
+
+# Mạng xã hội và liên hệ
+social:
+  github: yourusername
+  twitter: yourusername
+  linkedin: yourusername
+
+# Cài đặt buildling
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+highlighter: rouge
+
+# Bỏ qua các thư mục và tệp
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# Plugins Jekyll
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Cài đặt phân trang
+paginate: 6
+paginate_path: "/page/:num/"
+
+# Dữ liệu tùy chỉnh
+categories:
+  - Machine Learning
+  - Deep Learning
+  - NLP
+  - Computer Vision
+  - AI Ethics
+  - Reinforcement Learning
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:title/
+
+# Mặc định cho front matter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tên của bạn"
+      comments: true
+      share: true

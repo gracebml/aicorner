@@ -1,0 +1,84 @@
+---
+layout: page
+title: Chủ đề
+---
+
+<div class="categories-list">
+    {% for category in site.categories %}
+    {% assign category_name = category | first %}
+    {% assign category_posts = category | last %}
+    <div class="category-card">
+        <div class="category-icon">
+            {% case category_name %}
+            {% when 'Machine Learning' %}
+            <i class="fas fa-brain"></i>
+            {% when 'Deep Learning' %}
+            <i class="fas fa-network-wired"></i>
+            {% when 'NLP' %}
+            <i class="fas fa-language"></i>
+            {% when 'Computer Vision' %}
+            <i class="fas fa-eye"></i>
+            {% when 'AI Ethics' %}
+            <i class="fas fa-balance-scale"></i>
+            {% when 'Reinforcement Learning' %}
+            <i class="fas fa-gamepad"></i>
+            {% else %}
+            <i class="fas fa-microchip"></i>
+            {% endcase %}
+        </div>
+        <div class="category-info">
+            <h3>{{ category_name }}</h3>
+            <p>
+                {% case category_name %}
+                {% when 'Machine Learning' %}
+                Khám phá các thuật toán, kỹ thuật và ứng dụng của Machine Learning.
+                {% when 'Deep Learning' %}
+                Tìm hiểu về mạng neural, các kiến trúc và ứng dụng của học sâu.
+                {% when 'NLP' %}
+                Khám phá thế giới xử lý ngôn ngữ tự nhiên và các mô hình ngôn ngữ.
+                {% when 'Computer Vision' %}
+                Khám phá lĩnh vực thị giác máy tính và các ứng dụng của nó.
+                {% when 'AI Ethics' %}
+                Thảo luận về các vấn đề đạo đức và trách nhiệm trong phát triển AI.
+                {% when 'Reinforcement Learning' %}
+                Tìm hiểu về học tăng cường và các ứng dụng trong trò chơi và robot.
+                {% else %}
+                Khám phá các bài viết về {{ category_name }}.
+                {% endcase %}
+            </p>
+            <span class="post-count">{{ category_posts.size }} bài viết</span>
+            <a href="#{{ category_name | slugify }}" class="read-more">Xem bài viết <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% for category in site.categories %}
+{% assign category_name = category | first %}
+{% assign category_posts = category | last %}
+<section id="{{ category_name | slugify }}" class="category-posts">
+    <h3 class="category-title">{{ category_name }}</h3>
+    <div class="posts">
+        {% for post in category_posts limit:3 %}
+        <article class="post-card">
+            <div class="post-image">
+                {% if post.image %}
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+                {% else %}
+                <img src="/assets/images/placeholder.jpg" alt="{{ post.title }}">
+                {% endif %}
+            </div>
+            <div class="post-content">
+                <div class="post-meta">
+                    <span class="date">{{ post.date | date: "%d/%m/%Y" }}</span>
+                    <span class="category">{{ category_name }}</span>
+                </div>
+                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url }}" class="read-more">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}

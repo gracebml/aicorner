@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    {% if page.layout == 'post' %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+    {% endif %}
+    
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+</head>
+<body>
+    {% include header.html %}
+    
+    {% if page.layout == 'page' %}
+    <section class="page-header">
+        <div class="container">
+            <h2>{{ page.title }}</h2>
+            {% if page.subtitle %}
+            <p>{{ page.subtitle }}</p>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+    
+    {{ content }}
+    
+    {% include footer.html %}
+    
+    <script src="{{ '/js/script.js' | prepend: site.baseurl }}"></script>
+    
+    {% if page.layout == 'post' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+    {% endif %}
+</body>
+</html>

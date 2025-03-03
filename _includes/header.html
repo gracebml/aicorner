@@ -1,0 +1,13 @@
+<header>
+    <div class="container">
+        <h1 class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Trang chủ</a></li>
+                <li><a href="{{ site.baseurl }}/categories.html" {% if page.url == '/categories.html' %}class="active"{% endif %}>Chủ đề</a></li>
+                <li><a href="{{ site.baseurl }}/about.html" {% if page.url == '/about.html' %}class="active"{% endif %}>Giới thiệu</a></li>
+                <li><a href="{{ site.baseurl }}/contact.html" {% if page.url == '/contact.html' %}class="active"{% endif %}>Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
