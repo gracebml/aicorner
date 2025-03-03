@@ -119,7 +119,8 @@ main {
 /* Posts */
 .posts {
     display: grid;
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các post */
 }
 
 .post-card {
@@ -131,22 +132,22 @@ main {
 }
 
 .post-content {
-    padding: 15px; /* Giảm padding từ 25px xuống 15px */
+    padding: 15px; /* Giảm padding */
 }
 
 .post-content h3 {
-    font-size: 1.3rem; /* Giảm kích thước tiêu đề */
-    margin-bottom: 10px; /* Giảm khoảng cách */
+    font-size: 1.2rem; /* Giảm kích thước tiêu đề */
+    margin-bottom: 10px;
 }
 
 .post-content p {
-    margin-bottom: 10px; /* Giảm khoảng cách */
+    margin-bottom: 10px;
     font-size: 0.9rem; /* Giảm kích thước chữ */
 }
 
 .post-meta {
-    margin-bottom: 10px; /* Giảm khoảng cách */
-    font-size: 0.8rem; /* Giảm kích thước chữ */
+    margin-bottom: 10px;
+    font-size: 0.8rem;
 }
 
 .post-meta .date {
@@ -181,6 +182,7 @@ main {
     font-weight: 500;
     display: inline-flex;
     align-items: center;
+    font-size: 0.8rem; 
 }
 
 .read-more i {
@@ -846,7 +848,10 @@ footer {
 /* Responsive Styles */
 @media (max-width: 992px) {
     main {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 3fr 1fr; 
+        gap: 20px; 
+        padding: 40px 0; 
     }
     
     .sidebar {
