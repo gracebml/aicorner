@@ -5,7 +5,7 @@
     --secondary-color: #40559a;
     --dark-color: #27282a;
     --light-color: #f3f4f6;
-    --gray-color: #9ca3af;
+    --gray-color: #50545c;
     --body-font: 'Roboto', sans-serif;
     --heading-font: 'Playfair Display', serif;
 }
@@ -1029,4 +1029,8 @@ footer {
 
 .scrolled {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.placeholder-area {
+    display: none;
 }
