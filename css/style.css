@@ -86,7 +86,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -140,6 +140,7 @@ main {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    display: none;
 }
 
 .post-content {
