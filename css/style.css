@@ -283,9 +283,8 @@ main {
 footer {
     background-color: var(--light-color);
     color: #e3e3e3;
-    padding: 60px 0 20px;
+    padding: 30px 0 10px; /* Giảm padding từ 60px xuống 30px ở trên, và từ 20px xuống 10px ở dưới */
 }
-
 
 .copyright {
     text-align: center;
@@ -293,7 +292,7 @@ footer {
     background-color: #f3f4f6;
     color: var(--dark-color);
     font-size: 0.8rem;  
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Arial Narrow Bold';
 }
 
 .copyright i {
