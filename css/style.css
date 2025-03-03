@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #e1e2e4;
+    --primary-color: #dfdfdf;
     --secondary-color: #40559a;
-    --dark-color: #1f2937;
+    --dark-color: #27282a;
     --light-color: #f3f4f6;
     --gray-color: #9ca3af;
     --body-font: 'Roboto', sans-serif;
@@ -45,7 +45,7 @@ ul {
 
 /* Header */
 header {
-    background-color: #fff;
+    background-color: #faf0e6;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -81,6 +81,7 @@ nav ul li {
 nav ul li a {
     color: var(--dark-color);
     font-weight: 500;
+    font-family: var(--heading-font);
 }
 
 nav ul li a:hover,
@@ -418,7 +419,7 @@ footer {
 /* Page Header */
 .page-header {
     background-color: var(--primary-color);
-    color: #fff;
+    color: #463f3f;
     padding: 50px 0;
     text-align: center;
     margin-bottom: 60px;
