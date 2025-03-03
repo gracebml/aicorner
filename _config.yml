@@ -5,8 +5,8 @@ title: AI Insights
 description: Blog chia sẻ kiến thức về trí tuệ nhân tạo
 author: Tên của bạn
 email: email@example.com
-baseurl: "" # thư mục con, nếu trang của bạn được host ở một thư mục con
-url: "https://github.com/gracebml/aicorner/" # URL của trang web của bạn
+baseurl: "/aicorner"   # Dùng cho GitHub Pages
+url: "https://gracebml.github.io"
 
 # Mạng xã hội và liên hệ
 social:
