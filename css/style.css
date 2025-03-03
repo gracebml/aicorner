@@ -287,10 +287,10 @@ footer {
 .copyright {
     text-align: center;
     padding: 10px 0;  
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: #faf0e6;
+    color: var(--dark-color);
     font-size: 0.8rem;  
-    font-family: 'Arial Narrow Bold';
+    font-family: 'Segoe UI';
 }
 
 .copyright i {
@@ -992,4 +992,14 @@ footer {
 
 .placeholder-area {
     display: none;
+}
+
+html, body {
+    overflow-y: auto; /* Cho phép cuộn dọc */
+    height: 100%; /* Đảm bảo toàn bộ chiều cao của trang */
+    scroll-behavior: smooth; /* Cuộn mượt mà */
+}
+
+body {
+    overflow-x: hidden; /* Ngăn cuộn ngang */
 }
