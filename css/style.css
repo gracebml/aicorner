@@ -130,27 +130,23 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.post-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: none;
-}
-
 .post-content {
-    padding: 25px;
+    padding: 15px; /* Giảm padding từ 25px xuống 15px */
+}
+
+.post-content h3 {
+    font-size: 1.3rem; /* Giảm kích thước tiêu đề */
+    margin-bottom: 10px; /* Giảm khoảng cách */
+}
+
+.post-content p {
+    margin-bottom: 10px; /* Giảm khoảng cách */
+    font-size: 0.9rem; /* Giảm kích thước chữ */
 }
 
 .post-meta {
-    display: flex;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    color: var(--gray-color);
+    margin-bottom: 10px; /* Giảm khoảng cách */
+    font-size: 0.8rem; /* Giảm kích thước chữ */
 }
 
 .post-meta .date {
