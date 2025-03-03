@@ -1,14 +1,10 @@
-# _config.yml - Cấu hình Jekyll
-
-# Thông tin site
-title: AI Insights
-description: Blog chia sẻ kiến thức về trí tuệ nhân tạo
+title: AI Sharing Corner
+description: A small corner for everything we know about AI
 author: Tên của bạn
-email: email@example.com
+email: 
 baseurl: "/aicorner"   # Dùng cho GitHub Pages
 url: "https://gracebml.github.io"
 
-# Mạng xã hội và liên hệ
 social:
   github: yourusername
   twitter: yourusername

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
+    --primary-color: #e1e2e4;
+    --secondary-color: #40559a;
     --dark-color: #1f2937;
     --light-color: #f3f4f6;
     --gray-color: #9ca3af;
@@ -20,7 +20,7 @@ body {
     font-family: var(--body-font);
     line-height: 1.6;
     color: var(--dark-color);
-    background-color: #fff;
+    background-color: #faf0e6;
 }
 
 a {
