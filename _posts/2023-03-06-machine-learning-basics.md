@@ -4,7 +4,6 @@ title: "Cơ bản về học máy và ứng dụng thực tế"
 date: 2023-03-06
 categories: [Machine Learning]
 tags: [machine learning, algorithms, regression, classification]
-image: /assets/images/posts/machine-learning-basics.jpg
 excerpt: "Tìm hiểu những khái niệm cơ bản về Machine Learning và cách áp dụng những kỹ thuật này vào các bài toán thực tế."
 ---
 

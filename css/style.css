@@ -328,6 +328,10 @@ footer {
     margin-right: 10px;
 }
 
+footer {
+    display: none;
+}
+
 .copyright {
     text-align: center;
     padding-top: 20px;
