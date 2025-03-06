@@ -5,14 +5,14 @@ email:
 baseurl: "/aicorner"   # Dùng cho GitHub Pages
 url: "https://gracebml.github.io"
 
-social:
-  github: yourusername
-  twitter: yourusername
-  linkedin: yourusername
+# social:
+#   github: yourusername
+#   twitter: yourusername
+#   linkedin: yourusername
 
 # Cài đặt buildling
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: /posts/:title/
 highlighter: rouge
 
 # Bỏ qua các thư mục và tệp
@@ -48,7 +48,7 @@ categories:
 collections:
   posts:
     output: true
-    permalink: /:categories/:title/
+    permalink: /posts/:title/
 
 # Mặc định cho front matter
 defaults:

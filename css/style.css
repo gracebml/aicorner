@@ -89,10 +89,10 @@ nav ul li a.active {
     color: var(--secondary-color);
 }
 
-/* .hero {
+.hero {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 80px 0;
+    padding: 70px 0;
     text-align: center;
 }
 
@@ -100,18 +100,23 @@ nav ul li a.active {
     font-family: var(--heading-font);
     font-size: 3rem;
     margin-bottom: 20px;
+    color: #f7f4d3;
 }
 
+
 .hero p {
+    font-family: var(--heading-font);
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
-} */
+    color: #fdfcef;
+    
+}
 
 /* Main Content */
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 40px;
     padding: 60px 0;
 }
@@ -119,14 +124,14 @@ main {
 /* Posts */
 .posts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột bằng nhau */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 20px; /* Khoảng cách giữa các post */
 }
 
 .post-card {
     background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -206,6 +211,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .widget h4 {
@@ -235,12 +241,13 @@ main {
     padding: 0 15px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    height: fit-content;
 }
 
 .categories ul li {
     border-bottom: 1px solid #f3f4f6;
     padding: 10px 0;
-}
+}   
 
 .categories ul li:last-child {
     border-bottom: none;
@@ -460,7 +467,7 @@ footer {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
+    overflow: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -517,7 +524,12 @@ footer {
     padding-bottom: 15px;
     border-bottom: 2px solid #e5e7eb;
 }
-
+h2 {
+    color: #fffcd8
+}
+p {
+    font-family: var(--heading-font);
+}
 /* Contact Page */
 .contact-page {
     grid-template-columns: 1fr !important;
@@ -750,7 +762,7 @@ footer {
 
 .accordion-content {
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     transition: max-height 0.3s ease;
 }
 
@@ -831,7 +843,7 @@ footer {
 
 .related-posts h3:after {
     content: '';
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 70px;
@@ -992,14 +1004,4 @@ footer {
 
 .placeholder-area {
     display: none;
-}
-
-html, body {
-    overflow-y: auto; /* Cho phép cuộn dọc */
-    height: 100%; /* Đảm bảo toàn bộ chiều cao của trang */
-    scroll-behavior: smooth; /* Cuộn mượt mà */
-}
-
-body {
-    overflow-x: hidden; /* Ngăn cuộn ngang */
 }
